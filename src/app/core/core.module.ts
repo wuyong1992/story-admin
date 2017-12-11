@@ -11,8 +11,7 @@ import {CommonModule} from '@angular/common';
   declarations: []
 })
 export class CoreModule {
-  /* 初始化，该模块在系统中只加载一次 */
-  // @SkipSelf 跳出无限循环，去夫级中寻找
+
   /**
    * 初始化，该模块在系统中只加载一次
    * @param {CoreModule} parent 主模块
