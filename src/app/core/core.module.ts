@@ -1,14 +1,29 @@
 import {NgModule, Optional, SkipSelf} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {HeadComponent} from './head/head.component';
+import {SharedModule} from '../shared/shared.module';
+import { FootComponent } from './foot/foot.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 /**
  * 主模块,放置只在系统中加载一次的组件或者服务
  */
 @NgModule({
   imports: [
-    CommonModule
+    SharedModule
   ],
-  declarations: []
+  declarations: [
+    HeadComponent,
+    FootComponent,
+    SidebarComponent
+  ],
+  //导出，否则出了这个模块，其他模块不可使用
+  exports:[
+    HeadComponent,
+    FootComponent,
+    SidebarComponent
+  ],
+  providers: []
 })
 export class CoreModule {
 
