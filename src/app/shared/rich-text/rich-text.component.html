@@ -1,8 +1,4 @@
-<textarea name="content" id="editor">
-  <p>this CKEditor</p>
-</textarea>
-
-<div id="test" >
-  <p id="p2p">haha1</p>
-  <button id="btn">click</button>
-</div>
+<div [froalaEditor]="options" [(froalaModel)]="froalaText">Hello, Froala!</div>
+<p>
+  {{saveBtnClick}}
+</p>

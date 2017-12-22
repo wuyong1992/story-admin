@@ -1,0 +1,7 @@
+<div class="add-article-rich-text">
+  <app-rich-text (froala)="getArticle($event)" [saveBtnClick]="saveBtnClick"></app-rich-text>
+  <div class="save-article-btn">
+    <button mat-raised-button color="primary" (click)="saveArticle()" [disabled]="!saveBtnDisable">Save</button>
+  </div>
+</div>
+

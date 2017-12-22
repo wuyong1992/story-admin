@@ -19,7 +19,11 @@ import {CdkTableModule} from '@angular/cdk/table';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
+import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg';
+import {RouterModule} from '@angular/router';
+
+
 
 /**
  * 共享模块
@@ -27,9 +31,9 @@ import {HttpModule} from '@angular/http';
 @NgModule({
   imports: [
     CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
+
     FormsModule,
+    RouterModule,
     MatNativeDateModule,
     ReactiveFormsModule,
     CdkTableModule,
@@ -64,16 +68,17 @@ import {HttpModule} from '@angular/http';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    HttpModule
+    HttpClientModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot()
   ],
   declarations: [
     RichTextComponent
   ],
   exports: [
     CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
     FormsModule,
+    RouterModule,
     MatNativeDateModule,
     ReactiveFormsModule,
     CdkTableModule,
@@ -109,7 +114,7 @@ import {HttpModule} from '@angular/http';
     MatToolbarModule,
     MatTooltipModule,
     RichTextComponent,
-    HttpModule
+    HttpClientModule
   ]
 })
 export class SharedModule {

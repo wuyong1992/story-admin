@@ -7,33 +7,23 @@ import * as $ from 'jquery';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterViewInit{
-
-
-  title = 'app';
+export class AppComponent implements OnInit, AfterViewInit {
 
   flag = false;
-  h: string ;
+  h: string;
 
   toggleSideBar(event) {
     this.flag = event;
   }
 
 
-  constructor() {
+  constructor() {}
 
-    $(function () {
-      console.log($(window).height() - $('#story_header').height() - $('#story_foot').height() + 'px..');
-      //
-    });
-  }
-
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    console.log($(window).height() - $('#story_header').height() - $('#story_foot').height() + 'px');
-    this.h = $(window).height() - $('#story_header').height() - $('#story_foot').height() + 'px';
+    setTimeout(() => {
+      this.h = $(window).height() - $('#story_header').height() - $('#story_foot').height() + 'px';
+    });
   }
 }

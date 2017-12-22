@@ -7,6 +7,9 @@ import {CoreModule} from './core/core.module';
 import {SharedModule} from './shared/shared.module';
 
 import 'hammerjs';
+import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   //声明：组件 指令 管道
@@ -17,7 +20,11 @@ import 'hammerjs';
   imports: [
     AppRoutingModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot()
   ],
   //声明：服务
   providers: [],
