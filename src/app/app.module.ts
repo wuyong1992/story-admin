@@ -10,6 +10,7 @@ import 'hammerjs';
 import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AddArticleService} from './service/add-article.service';
 
 @NgModule({
   //声明：组件 指令 管道
@@ -27,7 +28,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     FroalaViewModule.forRoot()
   ],
   //声明：服务
-  providers: [],
+  providers: [
+    AddArticleService
+  ],
   //声明：主启动组件
   bootstrap: [AppComponent]
 })

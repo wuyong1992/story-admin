@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {environment} from '../../../environments/environment';
+import {AddArticleService} from '../../service/add-article.service';
 // import * as $ from 'jquery';
 
 // declare var $: any;
@@ -16,14 +17,30 @@ export class RichTextComponent implements OnInit {
 
   @Input()
   froalaText: string;
-  @Input()
-  saveBtnClick: boolean;/*以流的形式订阅才有效果*/
-
+  // @Input()
+  saveBtnClick: boolean;
+  /*以流的形式订阅才有效果*/
 
 
   options: object;
 
-  constructor() {
+  constructor(private addArticleService: AddArticleService) {
+    this.initRichText();
+
+  }
+
+  ngOnInit() {
+    this.addArticleService.isSaveArticleBtnClick.subscribe(
+      data => {
+        this.saveBtnClick = data;
+        if (this.saveBtnClick) {
+          this.froala.emit(this.froalaText);
+        }
+      }
+    );
+  }
+
+  initRichText() {
     this.froalaText = '';
     let that = this;
     this.options = {
@@ -68,13 +85,6 @@ export class RichTextComponent implements OnInit {
         }
       }*/
     };
-
-    if (this.saveBtnClick) {
-      console.log('haha');
-    }
-  }
-
-  ngOnInit() {
   }
 
 

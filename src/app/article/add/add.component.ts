@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {AddArticleService} from '../../service/add-article.service';
 
 @Component({
   selector: 'app-add',
@@ -8,26 +9,26 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class AddComponent implements OnInit {
 
   public saveBtnDisable: boolean;
-  saveBtnClick:boolean = false;
 
   @Output()
   save: EventEmitter<void> = new EventEmitter();
 
-  constructor() {
+  constructor(private addArticleService: AddArticleService) {
     this.saveBtnDisable = true;
   }
 
   ngOnInit() {
   }
 
-  saveArticle(){
-    this.saveBtnClick = true;
+  onClick() {
     this.saveBtnDisable = false;
-    this.save.emit();
+    this.addArticleService.clickSaveBtn()
   }
 
-  getArticle(event){
+  getArticle(event) {
+    // event 就是富文本中的值
     console.log(event);
+    this.addArticleService.saveOver();
   }
 
 }
