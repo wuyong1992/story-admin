@@ -7,7 +7,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class HeadComponent implements OnInit {
 
-  flag = false;
+  flag = true;
   @Output()
   toggle = new EventEmitter<boolean>();
 

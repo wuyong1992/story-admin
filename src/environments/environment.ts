@@ -6,5 +6,10 @@
 export const environment = {
   production: false,
 
-  richTextImgUpload: 'http://localhost:8080/backend/article/upload'
+  richTextImgUpload: 'http://localhost:8080/backend/article/upload',
+
+
+  // tag
+  getTagListUrl:'http://localhost:8080/backend/tag/get_tag_list'
+
 };

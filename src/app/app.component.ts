@@ -9,7 +9,7 @@ import * as $ from 'jquery';
 })
 export class AppComponent implements OnInit, AfterViewInit {
 
-  flag = false;
+  flag = true;
   h: string;
 
   toggleSideBar(event) {

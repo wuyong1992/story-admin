@@ -11,6 +11,7 @@ import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AddArticleService} from './service/add-article.service';
+import {TagService} from './service/tag.service';
 
 @NgModule({
   //声明：组件 指令 管道
@@ -29,7 +30,8 @@ import {AddArticleService} from './service/add-article.service';
   ],
   //声明：服务
   providers: [
-    AddArticleService
+    AddArticleService,
+    TagService
   ],
   //声明：主启动组件
   bootstrap: [AppComponent]

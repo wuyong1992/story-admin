@@ -1,6 +1,9 @@
+<!--文章-->
 <mat-expansion-panel>
   <mat-expansion-panel-header>
     <mat-panel-title>
+      <!--<mat-icon svgIcon="article" ></mat-icon>-->
+      <mat-icon>translate</mat-icon>
       Article
     </mat-panel-title>
     <mat-panel-description>
@@ -13,5 +16,65 @@
   </mat-nav-list>
   <mat-nav-list>
     <a mat-list-item > List </a>
+  </mat-nav-list>
+</mat-expansion-panel>
+
+<!--图片-->
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <mat-icon>image</mat-icon>
+      Image
+    </mat-panel-title>
+    <mat-panel-description>
+      image manage
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <mat-nav-list>
+    <a mat-list-item [routerLink]="['/image/upload']"> Upload </a>
+  </mat-nav-list>
+  <mat-nav-list>
+    <a mat-list-item > List </a>
+  </mat-nav-list>
+</mat-expansion-panel>
+
+<!--地图-->
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <mat-icon>map</mat-icon>
+      Map
+    </mat-panel-title>
+    <mat-panel-description>
+      map
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <mat-nav-list>
+    <a mat-list-item [routerLink]="['/map/baiduMap']"> BaiduMap </a>
+  </mat-nav-list>
+  <mat-nav-list>
+    <a mat-list-item [routerLink]="['/map/googleMap']"> GoogleMap </a>
+  </mat-nav-list>
+</mat-expansion-panel>
+
+<!--标签-->
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <mat-icon>Tag</mat-icon>
+      Tag
+    </mat-panel-title>
+    <mat-panel-description>
+      article tag
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <mat-nav-list>
+    <a mat-list-item [routerLink]="['/tag/add_tag']"> Add Tag </a>
+  </mat-nav-list>
+  <mat-nav-list>
+    <a mat-list-item [routerLink]="['/tag/tag_list']"> Tag List </a>
   </mat-nav-list>
 </mat-expansion-panel>

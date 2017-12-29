@@ -26,6 +26,7 @@ export class Article {
   articleContentDetail: string;
 
 
+
   createTime: Date;
   updateTime: Date;
   deleteTime: Date;

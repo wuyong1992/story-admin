@@ -22,6 +22,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg';
 import {RouterModule} from '@angular/router';
+import { ImageUploadComponent } from './image-upload/image-upload.component';
+import {NgZorroAntdModule} from 'ng-zorro-antd';
 
 
 
@@ -31,11 +33,11 @@ import {RouterModule} from '@angular/router';
 @NgModule({
   imports: [
     CommonModule,
-
     FormsModule,
     RouterModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    NgZorroAntdModule,
     CdkTableModule,
     MatAutocompleteModule,
     MatButtonModule,
@@ -73,12 +75,14 @@ import {RouterModule} from '@angular/router';
     FroalaViewModule.forRoot()
   ],
   declarations: [
-    RichTextComponent
+    RichTextComponent,
+    ImageUploadComponent
   ],
   exports: [
     CommonModule,
     FormsModule,
     RouterModule,
+    NgZorroAntdModule,
     MatNativeDateModule,
     ReactiveFormsModule,
     CdkTableModule,
@@ -114,7 +118,8 @@ import {RouterModule} from '@angular/router';
     MatToolbarModule,
     MatTooltipModule,
     RichTextComponent,
-    HttpClientModule
+    HttpClientModule,
+    ImageUploadComponent
   ]
 })
 export class SharedModule {
