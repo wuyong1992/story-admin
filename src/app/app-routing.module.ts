@@ -7,7 +7,8 @@ const routes: Routes = [
   {path:'article',loadChildren:'app/article/article.module#ArticleModule'},
   {path:'image',loadChildren:'app/image/image.module#ImageModule'},
   {path:'map',loadChildren:'app/map/map.module#MapModule'},
-  {path:'tag',loadChildren:'app/tag/tag.module#TagModule'}
+  {path:'tag',loadChildren:'app/tag/tag.module#TagModule'},
+  {path:'video',loadChildren:'app/video/video.module#VideoModule'}
 ];
 
 @NgModule({

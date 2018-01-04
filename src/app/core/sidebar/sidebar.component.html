@@ -15,7 +15,7 @@
     <a mat-list-item [routerLink]="['/article/add']"> Add </a>
   </mat-nav-list>
   <mat-nav-list>
-    <a mat-list-item > List </a>
+    <a mat-list-item> List </a>
   </mat-nav-list>
 </mat-expansion-panel>
 
@@ -35,7 +35,7 @@
     <a mat-list-item [routerLink]="['/image/upload']"> Upload </a>
   </mat-nav-list>
   <mat-nav-list>
-    <a mat-list-item > List </a>
+    <a mat-list-item> List </a>
   </mat-nav-list>
 </mat-expansion-panel>
 
@@ -76,5 +76,22 @@
   </mat-nav-list>
   <mat-nav-list>
     <a mat-list-item [routerLink]="['/tag/tag_list']"> Tag List </a>
+  </mat-nav-list>
+</mat-expansion-panel>
+
+<!--视屏-->
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <mat-icon>video_library</mat-icon>
+      video player
+    </mat-panel-title>
+    <mat-panel-description>
+      article tag
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <mat-nav-list>
+    <a mat-list-item [routerLink]="['/video']"> Video Test </a>
   </mat-nav-list>
 </mat-expansion-panel>
